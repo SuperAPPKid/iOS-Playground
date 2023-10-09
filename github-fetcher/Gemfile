@@ -1,0 +1,6 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+gem "cocoapods", "~> 1.13.0"
+gem 'activesupport', '~> 7.0', '<= 7.0.8' #7.1.0 has a bug (https://stackoverflow.com/a/77237290)
