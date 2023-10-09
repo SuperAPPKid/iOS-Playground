@@ -8,16 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1F4F920CD13433A4D712DA18 /* Pods_github_fetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B8E274F5D2B0C0D544FD88 /* Pods_github_fetcher.framework */; };
+		B17EBF522AD2D07600FE938B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17EBF512AD2D07600FE938B /* Repository.swift */; };
 		B19F3B4E2AD2BA44000524A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F3B4D2AD2BA44000524A0 /* AppDelegate.swift */; };
 		B19F3B502AD2BA44000524A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F3B4F2AD2BA44000524A0 /* SceneDelegate.swift */; };
 		B19F3B522AD2BA44000524A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F3B512AD2BA44000524A0 /* ViewController.swift */; };
 		B19F3B572AD2BA45000524A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B19F3B562AD2BA45000524A0 /* Assets.xcassets */; };
 		B19F3B5A2AD2BA45000524A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19F3B582AD2BA45000524A0 /* LaunchScreen.storyboard */; };
+		B1F48C772AD31A2E00663E8B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C762AD31A2E00663E8B /* Router.swift */; };
+		B1F48C7B2AD3260C00663E8B /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C7A2AD3260C00663E8B /* ApiManager.swift */; };
+		B1F48C7D2AD3272500663E8B /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C7C2AD3272500663E8B /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C08C413B46361F5863B3AAE /* Pods-github-fetcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-fetcher.debug.xcconfig"; path = "Target Support Files/Pods-github-fetcher/Pods-github-fetcher.debug.xcconfig"; sourceTree = "<group>"; };
 		74CB27B4821250008AA3AB4A /* Pods-github-fetcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-fetcher.release.xcconfig"; path = "Target Support Files/Pods-github-fetcher/Pods-github-fetcher.release.xcconfig"; sourceTree = "<group>"; };
+		B17EBF512AD2D07600FE938B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		B19F3B4A2AD2BA44000524A0 /* github-fetcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "github-fetcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19F3B4D2AD2BA44000524A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B19F3B4F2AD2BA44000524A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,9 @@
 		B19F3B592AD2BA45000524A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B19F3B5B2AD2BA45000524A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1B8E274F5D2B0C0D544FD88 /* Pods_github_fetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_github_fetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1F48C762AD31A2E00663E8B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B1F48C7A2AD3260C00663E8B /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		B1F48C7C2AD3272500663E8B /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B17EBF532AD317E300FE938B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B1F48C752AD31A1000663E8B /* Network */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		B19F3B412AD2BA44000524A0 = {
 			isa = PBXGroup;
 			children = (
@@ -81,11 +97,32 @@
 				B19F3B4D2AD2BA44000524A0 /* AppDelegate.swift */,
 				B19F3B4F2AD2BA44000524A0 /* SceneDelegate.swift */,
 				B19F3B512AD2BA44000524A0 /* ViewController.swift */,
+				B17EBF532AD317E300FE938B /* Service */,
+				B1A2C4F02AD2CCA400B06E1D /* Model */,
+				B1A2C4F12AD2CCB000B06E1D /* UI */,
 				B19F3B562AD2BA45000524A0 /* Assets.xcassets */,
 				B19F3B582AD2BA45000524A0 /* LaunchScreen.storyboard */,
 				B19F3B5B2AD2BA45000524A0 /* Info.plist */,
 			);
 			path = "github-fetcher";
+			sourceTree = "<group>";
+		};
+		B1A2C4F02AD2CCA400B06E1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B17EBF512AD2D07600FE938B /* Repository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B1F48C752AD31A1000663E8B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B1F48C7A2AD3260C00663E8B /* ApiManager.swift */,
+				B1F48C762AD31A2E00663E8B /* Router.swift */,
+				B1F48C7C2AD3272500663E8B /* Response.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +242,10 @@
 				B19F3B522AD2BA44000524A0 /* ViewController.swift in Sources */,
 				B19F3B4E2AD2BA44000524A0 /* AppDelegate.swift in Sources */,
 				B19F3B502AD2BA44000524A0 /* SceneDelegate.swift in Sources */,
+				B1F48C772AD31A2E00663E8B /* Router.swift in Sources */,
+				B1F48C7B2AD3260C00663E8B /* ApiManager.swift in Sources */,
+				B17EBF522AD2D07600FE938B /* Repository.swift in Sources */,
+				B1F48C7D2AD3272500663E8B /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
