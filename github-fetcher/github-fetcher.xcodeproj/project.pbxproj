@@ -17,6 +17,9 @@
 		B1F48C772AD31A2E00663E8B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C762AD31A2E00663E8B /* Router.swift */; };
 		B1F48C7B2AD3260C00663E8B /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C7A2AD3260C00663E8B /* ApiManager.swift */; };
 		B1F48C7D2AD3272500663E8B /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C7C2AD3272500663E8B /* Response.swift */; };
+		B1F48C7F2AD328EF00663E8B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C7E2AD328EF00663E8B /* ListViewController.swift */; };
+		B1F48C842AD32B6900663E8B /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C832AD32B6900663E8B /* Then.swift */; };
+		B1F48C882AD32E0B00663E8B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C872AD32E0B00663E8B /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		B1F48C762AD31A2E00663E8B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B1F48C7A2AD3260C00663E8B /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		B1F48C7C2AD3272500663E8B /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		B1F48C7E2AD328EF00663E8B /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		B1F48C832AD32B6900663E8B /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
+		B1F48C872AD32E0B00663E8B /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,7 @@
 				B17EBF532AD317E300FE938B /* Service */,
 				B1A2C4F02AD2CCA400B06E1D /* Model */,
 				B1A2C4F12AD2CCB000B06E1D /* UI */,
+				B1F48C822AD32B5A00663E8B /* utility */,
 				B19F3B562AD2BA45000524A0 /* Assets.xcassets */,
 				B19F3B582AD2BA45000524A0 /* LaunchScreen.storyboard */,
 				B19F3B5B2AD2BA45000524A0 /* Info.plist */,
@@ -115,14 +122,39 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B1A2C4F12AD2CCB000B06E1D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B1F48C872AD32E0B00663E8B /* NavigationController.swift */,
+				B1F48C8E2AD3729F00663E8B /* List */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		B1F48C752AD31A1000663E8B /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				B1F48C7A2AD3260C00663E8B /* ApiManager.swift */,
-				B1F48C762AD31A2E00663E8B /* Router.swift */,
 				B1F48C7C2AD3272500663E8B /* Response.swift */,
+				B1F48C762AD31A2E00663E8B /* Router.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		B1F48C822AD32B5A00663E8B /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				B1F48C832AD32B6900663E8B /* Then.swift */,
+			);
+			path = utility;
+			sourceTree = "<group>";
+		};
+		B1F48C8E2AD3729F00663E8B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				B1F48C7E2AD328EF00663E8B /* ListViewController.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,11 +273,14 @@
 			files = (
 				B19F3B522AD2BA44000524A0 /* ViewController.swift in Sources */,
 				B19F3B4E2AD2BA44000524A0 /* AppDelegate.swift in Sources */,
+				B1F48C842AD32B6900663E8B /* Then.swift in Sources */,
 				B19F3B502AD2BA44000524A0 /* SceneDelegate.swift in Sources */,
 				B1F48C772AD31A2E00663E8B /* Router.swift in Sources */,
 				B1F48C7B2AD3260C00663E8B /* ApiManager.swift in Sources */,
 				B17EBF522AD2D07600FE938B /* Repository.swift in Sources */,
 				B1F48C7D2AD3272500663E8B /* Response.swift in Sources */,
+				B1F48C882AD32E0B00663E8B /* NavigationController.swift in Sources */,
+				B1F48C7F2AD328EF00663E8B /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
