@@ -160,6 +160,10 @@ extension ListViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        cellViewModels[indexPath.row].navigate()
+    }
+    
 }
 
 // searchBar's delegate

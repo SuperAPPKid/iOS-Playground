@@ -10,6 +10,8 @@ import Combine
 
 class ListViewModel {
     
+    var onNavigate: ((Repository) -> Void)?
+    
     @Published
     private var items = [Repository]()
     
@@ -17,9 +19,14 @@ class ListViewModel {
         return $items
             .map { items in
                 return items.map { item in
-                    return CellViewModel(thumbURL: item.ownerIconPath.flatMap { URL(string: $0) },
+                    let cellVM = CellViewModel(thumbURL: item.ownerIconPath.flatMap { URL(string: $0) },
                                          name: item.name,
                                          description: item.description)
+                    cellVM.onNavigate = { [weak self] in
+                        guard let self else { return }
+                        self.onNavigate?(item)
+                    }
+                    return cellVM
                 }
             }
             .eraseToAnyPublisher()
@@ -61,10 +68,16 @@ extension ListViewModel {
         @Published
         private(set) var description: String?
         
+        var onNavigate: (() -> Void)?
+        
         init(thumbURL: URL? = nil, name: String?, description: String?) {
             self.thumbURL = thumbURL
             self.name = name
             self.description = description
+        }
+        
+        func navigate() {
+            onNavigate?()
         }
     }
     

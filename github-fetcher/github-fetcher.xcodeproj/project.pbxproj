@@ -17,9 +17,11 @@
 		B1F48C7B2AD3260C00663E8B /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C7A2AD3260C00663E8B /* ApiManager.swift */; };
 		B1F48C7D2AD3272500663E8B /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C7C2AD3272500663E8B /* Response.swift */; };
 		B1F48C7F2AD328EF00663E8B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C7E2AD328EF00663E8B /* ListViewController.swift */; };
+		B1F48C812AD328F800663E8B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C802AD328F800663E8B /* DetailViewController.swift */; };
 		B1F48C842AD32B6900663E8B /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C832AD32B6900663E8B /* Then.swift */; };
 		B1F48C882AD32E0B00663E8B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C872AD32E0B00663E8B /* NavigationController.swift */; };
 		B1F48C902AD4006300663E8B /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C8F2AD4006300663E8B /* ListViewModel.swift */; };
+		B1F48C942AD498DF00663E8B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F48C932AD498DF00663E8B /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +39,11 @@
 		B1F48C7A2AD3260C00663E8B /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		B1F48C7C2AD3272500663E8B /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		B1F48C7E2AD328EF00663E8B /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		B1F48C802AD328F800663E8B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B1F48C832AD32B6900663E8B /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		B1F48C872AD32E0B00663E8B /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		B1F48C8F2AD4006300663E8B /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		B1F48C932AD498DF00663E8B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				B1F48C872AD32E0B00663E8B /* NavigationController.swift */,
+				B1F48C8D2AD3729800663E8B /* Detail */,
 				B1F48C8E2AD3729F00663E8B /* List */,
 			);
 			path = UI;
@@ -146,6 +151,15 @@
 				B1F48C832AD32B6900663E8B /* Then.swift */,
 			);
 			path = utility;
+			sourceTree = "<group>";
+		};
+		B1F48C8D2AD3729800663E8B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B1F48C802AD328F800663E8B /* DetailViewController.swift */,
+				B1F48C932AD498DF00663E8B /* DetailViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		B1F48C8E2AD3729F00663E8B /* List */ = {
@@ -278,8 +292,10 @@
 				B1F48C7B2AD3260C00663E8B /* ApiManager.swift in Sources */,
 				B17EBF522AD2D07600FE938B /* Repository.swift in Sources */,
 				B1F48C7D2AD3272500663E8B /* Response.swift in Sources */,
+				B1F48C942AD498DF00663E8B /* DetailViewModel.swift in Sources */,
 				B1F48C882AD32E0B00663E8B /* NavigationController.swift in Sources */,
 				B1F48C7F2AD328EF00663E8B /* ListViewController.swift in Sources */,
+				B1F48C812AD328F800663E8B /* DetailViewController.swift in Sources */,
 				B1F48C902AD4006300663E8B /* ListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
