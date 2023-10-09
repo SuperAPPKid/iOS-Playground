@@ -20,10 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         
-        let listVC = ListViewController().then {
-            $0.bind(viewModel: .init())
-        }
-        window.rootViewController = NavigationController(rootViewController: listVC)
+        window.rootViewController = NavigationController(rootViewController: genListViewController())
         window.makeKeyAndVisible()
     }
 
@@ -55,6 +52,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    private func genListViewController() -> UIViewController {
+        
+        let genDetailViewController = { (repo: Repository) -> UIViewController in
+            let detailVC = DetailViewController()
+            detailVC.bind(viewModel: DetailViewModel(repository: repo))
+            return detailVC
+        }
+        
+        let listVC = ListViewController()
+        let listVM = ListViewModel().then {
+            $0.onNavigate = { [weak listVC] repo in
+                guard let listVC else { return }
+                let detailVC = genDetailViewController(repo)
+                listVC.navigationController?.pushViewController(detailVC, animated: true)
+            }
+        }
+        listVC.bind(viewModel: listVM)
+        
+        return listVC
+    }
 
 }
 

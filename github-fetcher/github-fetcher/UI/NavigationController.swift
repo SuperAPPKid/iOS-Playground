@@ -20,7 +20,7 @@ class NavigationController: UINavigationController {
         
         navigationBar.prefersLargeTitles = true
         
-        navigationBar.publisher(for: \.bounds, options: [.new, .initial])
+        navigationBar.publisher(for: \.frame, options: [.new, .initial])
             .receive(on: OperationQueue.main)
             .map { Int($0.height) > 44 }
             .sink { [weak self] isLargeBar in

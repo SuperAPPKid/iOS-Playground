@@ -43,6 +43,7 @@ class ListViewController: UITableViewController {
         view.backgroundColor = .systemGroupedBackground
         
         navigationItem.title = "Repository Search"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .done, target: nil, action: nil)
         navigationItem.largeTitleDisplayMode = .always
         
         tableView.keyboardDismissMode = .onDrag
@@ -59,7 +60,10 @@ class ListViewController: UITableViewController {
         Optional.Publisher(navigationController as? NavigationController)
             .flatMap { $0.$isLargeBar }
             .sink { [weak self] isLargeBar in
-                guard let self else { return }
+                guard
+                    let self,
+                    self.navigationController?.topViewController === self
+                else { return }
                 
                 if isLargeBar {
                     self.navigationController?.navigationBar.do {

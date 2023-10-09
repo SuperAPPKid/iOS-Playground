@@ -82,3 +82,5 @@ extension ListViewModel {
     }
     
 }
+
+extension ListViewModel: Then {}
