@@ -22,8 +22,7 @@ class NavigationController: UINavigationController {
         
         navigationBar.publisher(for: \.bounds, options: [.new, .initial])
             .receive(on: OperationQueue.main)
-            .map { $0.height > 44 }
-            .removeDuplicates()
+            .map { Int($0.height) > 44 }
             .sink { [weak self] isLargeBar in
                 self?.isLargeBar = isLargeBar
             }.store(in: &cancellables)
